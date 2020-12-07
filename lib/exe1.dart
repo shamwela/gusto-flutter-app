@@ -9,7 +9,7 @@ void main() {
       ),
       body: Center(
         child: Image(
-          image: AssetImage('assets/charli-xcx.jpg'),
+          image: AssetImage('assets/google.png'),
         ),
       ),
     ),

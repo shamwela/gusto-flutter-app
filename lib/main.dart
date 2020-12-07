@@ -11,7 +11,7 @@ void main() {
       body: Center(
         child: Image(
           // image: NetworkImage('https://via.placeholder.com/300'),
-          image: AssetImage('assets/charli-xcx.jpg'),
+          image: AssetImage('assets/google.png'),
         ),
       ),
       backgroundColor: Color(0xffffffff),
