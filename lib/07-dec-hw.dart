@@ -13,26 +13,33 @@ class MyApp extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Column(
-        mainAxisSize: MainAxisSize.max,
-        // vertical
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center, // horizontal
+        mainAxisAlignment: MainAxisAlignment.spaceAround, // vertical
+
         children: <Widget>[
           Text('My Profile',
               style: TextStyle(
                   fontSize: 50,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
                   color: Colors.white)),
+
+          // Profile picture
           CircleAvatar(
             radius: 50,
             // backgroundColor: Colors.blue,
             backgroundImage: AssetImage('assets/shamwela.jpg'),
           ),
+
+          // Name
           Container(
-            color: Colors.white,
+            width: 320,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(100)),
+                color: Colors.white),
             margin: EdgeInsets.symmetric(horizontal: 50),
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
                   Icons.account_box_outlined,
@@ -40,18 +47,24 @@ class MyApp extends StatelessWidget {
                   color: Colors.black,
                 ),
                 SizedBox(
-                  width: 30,
+                  width: 15,
                 ),
                 Text('Sha Mwe La',
                     style: TextStyle(fontSize: 25, color: Colors.black)),
               ],
             ),
           ),
+
+          // Batch
           Container(
-            color: Colors.white,
+            width: 320,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(100)),
+                color: Colors.white),
             margin: EdgeInsets.symmetric(horizontal: 50),
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
                   Icons.assignment_outlined,
@@ -59,18 +72,24 @@ class MyApp extends StatelessWidget {
                   color: Colors.black,
                 ),
                 SizedBox(
-                  width: 30,
+                  width: 15,
                 ),
                 Text('HND-30',
                     style: TextStyle(fontSize: 25, color: Colors.black)),
               ],
             ),
           ),
+
+          // Email
           Container(
-            color: Colors.white,
+            width: 320,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(100)),
+                color: Colors.white),
             margin: EdgeInsets.symmetric(horizontal: 50),
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
                   Icons.email_outlined,
@@ -78,16 +97,16 @@ class MyApp extends StatelessWidget {
                   color: Colors.black,
                 ),
                 SizedBox(
-                  width: 30,
+                  width: 15,
                 ),
                 Text('name@email.com',
                     style: TextStyle(fontSize: 25, color: Colors.black)),
               ],
             ),
           ),
-          Text('Developed by Sha Mwe La',
-              style: TextStyle(color: Colors.white)),
-          Text('Version 1.0', style: TextStyle(color: Colors.white))
+          Text('''Developed by Sha Mwe La
+              Version 1.0''',
+              style: TextStyle(height: 1.6, color: Colors.white))
         ],
       )),
       backgroundColor: Colors.black,
